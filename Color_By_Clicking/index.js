@@ -9,10 +9,16 @@ window.onload = () =>{
 function main() {
     const root = document.getElementById("root")
     const btn = document.getElementById('change-btn')
+    const value = document.getElementById("input")
+    const copyBtn = document.getElementById("copyBtn")
 
     btn.addEventListener('click', function() {
         const bgColor = generateRGBColor()
         root.style.backgroundColor = bgColor
+        value.value = bgColor
+    })
+    copyBtn.addEventListener('click',function () {
+        navigator.clipboard.writeText(value.value)
     })
 }
 
@@ -21,5 +27,5 @@ function generateRGBColor() {
     const green = Math.floor(Math.random() *255)
     const blue = Math.floor(Math.random() *255)
 
-    return `rgb(${red}, ${green}, ${blue})`
+    return `#${red.toString(16)}${green.toString(16)}${blue.toString(16)}`
 }

@@ -22,7 +22,7 @@ body{
     align-items: center;
 }
 
-button{
+.button{
     padding: 1rem 3rem;
     margin: 1rem 0;
     outline: none;
@@ -35,7 +35,7 @@ button{
     letter-spacing: 1px;
     cursor: pointer;
 }
-button:hover{
+.button:hover{
     background-color: #fff;
     color: #000;
     border: 1px solid #000;
@@ -45,4 +45,20 @@ button:hover{
 h1{
     text-shadow: -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff, 1px 1px 0 #fff;
     text-align: center;
+}
+
+#input{
+    padding: 4px;
+    font-size: large;
+    text-align: center;
+    margin: 24px 0px;
+    background: #fff;
+}
+.btn1{
+    background-color: white;
+    color: #000;
+    padding: 4px 8px;
+    font-size: large;
+    border-radius: 5px;
+    cursor: pointer;
 }
