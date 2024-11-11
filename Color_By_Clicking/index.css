@@ -48,11 +48,12 @@ h1{
 }
 
 #input{
-    padding: 4px;
+    padding: 4px 0px;
     font-size: large;
-    text-align: center;
-    margin: 24px 0px;
+    border-radius: .25rem;
+    margin: 24px px;
     background: #fff;
+    padding-left: 2.4rem;
 }
 .btn1{
     background-color: white;
@@ -61,4 +62,57 @@ h1{
     font-size: large;
     border-radius: 5px;
     cursor: pointer;
+}
+.tost-msg{
+    position: fixed;
+    top: 2rem;
+    right: 2rem;
+    background-color: rgb(19, 201, 110);
+    padding: 1rem 2rem;
+    border-radius: .25rem;
+    cursor: pointer;
+    border: 1px solid #fff;
+    box-shadow: 0 4px 8px 0 rgb(0,0,0,.2);
+}
+
+.tost-msg-slide-in{
+    animation: tost-msg-in 0.5s ease-in;
+}
+.tost-msg-slide-out{
+    animation: tost-msg-out 0.5s ease-in;
+}
+.input-group{
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.icon{
+    font-size: large;
+    position: absolute;
+    padding: .35rem .75rem;
+    background-color: #ddd;
+    border-top-left-radius: 0.25rem;
+	border-bottom-left-radius: 0.25rem;
+}
+
+@keyframes tost-msg-in{
+    from {
+        transform: translateX(200px);
+        opacity: 0;
+    }
+    to{
+        transform: translateX(0px);
+        opacity: 1;
+    }
+}
+@keyframes tost-msg-out{
+    from {
+        transform: translateX(0px);
+        opacity: 1;
+    }
+    to{
+        transform: translateX(200px);
+        opacity: 0;
+    }
 }
